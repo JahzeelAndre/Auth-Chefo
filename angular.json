@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,8 +95,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "auth:build:production",
+            "firebaseProject": "rutas-1afa0",
+            "firebaseHostingSite": "rutas-1afa0"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "23dfb743-aca0-41d5-b2b9-04bb4bf147f1"
   }
 }
